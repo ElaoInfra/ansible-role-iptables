@@ -1,0 +1,5 @@
+{%- macro config(parameters) -%}
+    {%- for parameter in parameters -%}
+        {{ parameter }}{{ '\n' }}
+    {%- endfor -%}
+{%- endmacro -%}

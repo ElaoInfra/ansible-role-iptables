@@ -1,0 +1,9 @@
+---
+
+- name: rules > Template
+  template:
+    src:  "{{ elao_iptables_rules_template|ternary(elao_iptables_rules_template, 'rules/base.j2') }}"
+    dest: "{{ elao_iptables_rules_file }}"
+  when: (elao_iptables_rules_template is not none) or (elao_iptables_rules|length)
+  notify:
+    - iptables-persistent restart

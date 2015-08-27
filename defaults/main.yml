@@ -1,0 +1,6 @@
+---
+
+# Rules
+elao_iptables_rules_file:     /etc/iptables/rules.v4
+elao_iptables_rules_template: ~
+elao_iptables_rules:          []

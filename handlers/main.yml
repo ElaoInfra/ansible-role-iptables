@@ -1,0 +1,7 @@
+---
+
+- name: iptables-persistent restart
+  service:
+    name:  iptables-persistent
+    state: restarted
+  failed_when: false
